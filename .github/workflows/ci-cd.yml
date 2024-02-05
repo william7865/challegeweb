@@ -6,21 +6,26 @@ on:
       - main
 
 jobs:
-  test-all:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install Dependencies
-      run: npm install
+      - name: HTML linting
+        run: npx htmlhint "index.html"
 
-    - name: Run HTML Tests
-      run: npm run test:html
+      - name: CSS linting
+        run: npx stylelint "style.css"
 
-    - name: Run CSS Tests
-      run: npm run test:css
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-    - name: Run JavaScript Tests
-      run: npm run test:javascript
+      - name: Install dependencies
+        run: npm install
+
+      - name: JavaScript linting
+        run: npx eslint "code.js"
