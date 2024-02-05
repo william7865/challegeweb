@@ -1,0 +1,26 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-all:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run HTML Tests
+      run: npm run test:html
+
+    - name: Run CSS Tests
+      run: npm run test:css
+
+    - name: Run JavaScript Tests
+      run: npm run test:javascript
