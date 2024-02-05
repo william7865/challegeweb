@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body { 
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
+  }
+ 
+.accueil {
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.accueil h1 {
+    margin-left: 3%;
+    color:white;
+    font-size: 80px;
+    z-index: 50;
+}
+.accueil p {
+  margin-left: 3%;
+  color:white;
+  font-size: 25px;
+  z-index: 50;
+
+}
+
+.accueil img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+nav {
+  background: #5ec6a500; /* fond */
+  padding: 0.5em 1em 0.5em 1em;
+  position: fixed;
+  width: 75%;
+  top: 0;
+  left: 12.5%;
+  border-radius: 5px;
+  z-index: 51;
+  font-weight: bolder;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 17px;
+  transition:background-color 0.3s ease-in-out; 
+  border-radius: 8px;
+}
+
+.nav:hover {
+  background-color: #5ec6a5 !important;
+}
+.nav > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav .information {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+nav i {
+  font-size: 1.5em;
+  color: rgb(27, 27, 27);
+  transition-duration: 0.3s;
+}
+
+nav i:hover {
+  color: rgb(255, 255, 255);
+}
+
+nav .information p {
+  color: rgb(27, 27, 27);
+  font-weight: 600;
+}
+
+nav .information a {
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
+}
+
+nav .navigation a,
+nav .auth a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition-duration: 0.3s;
+  margin-right: 10px;
+}
+
+nav .navigation a:hover,
+nav .auth a:hover {
+  transform: scale(1.1);
+  color: rgb(215, 237, 255);
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 51;
+    top: 0;
+    left: -250px;
+    background-color: #5ec6a5ea;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+    border-radius: 6px;
+ }
+ 
+ .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    display: block;
+    transition: 0.3s;
+    font-family: inherit;
+    font-weight: bold;
+ }
+ .sidenav a a {
+  color: blue;
+ }
+ .sidenav a:hover {
+  color :rgb(44, 41, 39);
+  cursor:pointer;
+ }
+ 
+ .sidenav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+ }
+ .sidenav.active {
+     left: 0;
+ }
+.sidenav .close {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+
+ }
+ .sidenav .sub-menu  {
+     display: none;
+   }
+ 
+.sidenav .sub-menu.active {
+     display: block;
+   }
+.sidenav .sub-menu a {
+  font-size: 15px;
+  background-color:#92c7b5;
+  padding: 5px 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+ 
+   .scroll-to-bottom {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: #333;
+     color: #fff;
+     padding: 10px 20px;
+     text-decoration: none;
+   }
+  #openBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 35px;
+  cursor: pointer;
+}
+
+#openBtn span {
+  width: 100%;
+  height: 5px;
+  background: rgb(27, 27, 27);
+  border-radius: 5px;
+}
+ 
+  button {
+    margin-left: 40px;
+    border-radius: 6px;
+    padding: 20px 30px;
+    font-size:large;
+    color: #ffffff;
+    background-color: rgb(44, 41, 39);
+    margin-bottom: 15px;
+    cursor: pointer;
+    border:none;
+    overflow: hidden;
+    font-weight: bold;
+    
+ }
+ 
+ .bodyimage2 {
+    margin-top:20px;
+    height: 900px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: flex;
+    border-radius: 6px;
+    margin-right: 15px;
+    margin-left: 15px;
+ }
+
+ .dossier h2 {
+  text-align: center;
+  align-items: center;
+  margin-top: 19vh;
+  display: flex;
+  font-size: 60px;
+  z-index: 50;
+  color: rgb(44, 41, 39);
+  display: flex;
+  justify-content:center;
+}
+
+ 
+ .image5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+ }
+ .buttonPage2 {
+    margin-right: 15px;
+    margin-left: 65px;
+    margin-top: 300px;
+    margin-bottom: 20px;
+    float: right;
+    display:table-column-group
+ }
+ 
+ .bodyimage3 {
+    background-image: url('https://cdn.discordapp.com/attachments/1184148823703027712/1184150431589478420/dossier_social_etudiant_web.png?ex=658aed07&is=65787807&hm=f41d56752e5c0fe65dfe5daf21377fbcc6734168a1b38dec14f28c21de934dfd&');
+    background-size: cover;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+ }
+ 
+ 
+ .bodyimage3 h2 {
+  display: flex;
+  color:white;
+  font-size: 60px;
+  justify-content:center;
+  top: 5%;
+  left: 25%;
+  text-align: end;
+  margin-bottom: auto;
+  position: relative;
+  
+}
+ button:hover {
+    background-color:rgb(66, 62, 59);
+    transition:0.2s;
+  }
+ 
+  button:active {
+    transform: scale(0.9);
+  }
+ 
+  .bodyimage4 {
+    margin-top: 40px;
+    background-image: url('https://media.discordapp.net/attachments/1184148823703027712/1184151025263853578/201408271609279.png?ex=658aed94&is=65787894&hm=7db2ac41e1bc3973ca3f83a914d93544f63f2a89f992e2470bd57046c0ef4b39&=&format=webp&quality=lossless&width=1002&height=668');
+    height: 700px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    border-radius: 10px;
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 120px;
+    
+ }
+ 
+ .logementtxt h2{
+  display: flex;
+  font-size: 60px;
+  text-align: top;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  color: rgb(44, 41, 39);
+  left: 10%;
+  position: relative;
+  margin-top: 80px;
+ }
+ 
+ .buttonPage4 {
+    margin-right: 40px;
+ }
+ 
+ iframe {
+    display: flex;
+    margin-right: 500px;
+    border-radius: 30px;
+ }
